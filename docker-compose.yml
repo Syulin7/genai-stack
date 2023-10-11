@@ -3,8 +3,6 @@ services:
   llm:
     image: ollama/ollama:latest
     profiles: ["linux"]
-    ports:
-      - 11434:11434
     networks:
       - net
 
