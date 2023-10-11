@@ -5,6 +5,13 @@ services:
     profiles: ["linux"]
     networks:
       - net
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
 
   pull-model:
     image: genai-stack/pull-model:latest
